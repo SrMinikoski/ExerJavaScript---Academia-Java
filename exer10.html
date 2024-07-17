@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer10</title>
+</head>
+<body>
+    <h1>Exer10</h1>
+    <form onsubmit="return validarFormulario()">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br><br>
+
+        <label>Pessoa:</label>
+        <input type="radio" id="fisica" name="pessoa" value="fisica" onclick="toggleFields()"> Física
+        <input type="radio" id="juridica" name="pessoa" value="juridica" onclick="toggleFields()"> Jurídica<br><br>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" disabled><br><br>
+
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" id="cnpj" name="cnpj" disabled><br><br>
+
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="text" id="dataNascimento" name="dataNascimento" disabled><br><br>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco"><br><br>
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep"><br><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+<footer>
+    <a href="Menu.html">Voltar ao menu</a>
+</footer>
+</html>
+<script>
+    function toggleFields() {
+        var pessoaFisica = document.getElementById("fisica").checked;
+        var pessoaJuridica = document.getElementById("juridica").checked;
+
+        document.getElementById("cpf").disabled = !pessoaFisica;
+        document.getElementById("cnpj").disabled = !pessoaJuridica;
+        document.getElementById("dataNascimento").disabled = !pessoaFisica;
+    }
+
+    function validarFormulario() {
+        var nome = document.getElementById("nome").value;
+        var cpf = document.getElementById("cpf").value;
+        var cnpj = document.getElementById("cnpj").value;
+        var dataNascimento = document.getElementById("dataNascimento").value;
+        var endereco = document.getElementById("endereco").value;
+        var cep = document.getElementById("cep").value;
+        var telefone = document.getElementById("telefone").value;
+        var email = document.getElementById("email").value;
+
+        if (nome === "" || endereco === "" || cep === "" || telefone === "" || email === "") {
+            alert("Todos os campos devem ser preenchidos.");
+            return false;
+        }
+
+        if (document.getElementById("fisica").checked) {
+            if (cpf === "" || dataNascimento === "") {
+                alert("CPF e Data de Nascimento são obrigatórios para pessoa física.");
+                return false;
+            }
+            if (!/^\d+$/.test(dataNascimento)) {
+                alert("Data de Nascimento deve conter apenas números.");
+                return false;
+            }
+        }
+
+        if (document.getElementById("juridica").checked) {
+            if (cnpj === "") {
+                alert("CNPJ é obrigatório para pessoa jurídica.");
+                return false;
+            }
+        }
+
+        if (!/^\d+$/.test(cep)) {
+            alert("CEP deve conter apenas números.");
+            return false;
+        }
+
+        return true;
+    }
+</script>

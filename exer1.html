@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer1</title>
+</head>
+<body>
+    <h1>Exer1</h1>
+    <button id="vermelho" onclick="vermelho()">Vermelho</button><br><br>
+    <button id="verde" onclick="verde()">Verde</button><br><br>
+    <button id="azul" onclick="azul()">Azul</button><br><br>
+    <button id="amarelo" onclick="amarelo()">Amarelo</button><br><br>
+</body>
+<footer>
+    <a href="Menu.html">Voltar ao menu</a>
+</footer>
+</html>
+<script>
+var bvermelho = document.getElementById("vermelho")
+var bverde = document.getElementById("verde")
+var bazul = document.getElementById("azul")
+var bamarelo= document.getElementById("amarelo")
+var bg = document.getElementsByTagName("body")[0]
+function vermelho(){
+    bg.style.backgroundColor = 'red'
+}
+function verde(){
+    bg.style.backgroundColor = 'green'
+}
+function azul(){
+    bg.style.backgroundColor = 'blue'
+}
+function amarelo(){
+    bg.style.backgroundColor = 'yellow'
+}
+
+
+</script>

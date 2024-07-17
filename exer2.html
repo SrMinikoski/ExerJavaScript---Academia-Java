@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer2</title>
+</head>
+<body>
+    <h1>Exer2</h1>
+    <a href="" id="r" onmouseover="r()">Vermelho</a><br><br>
+    <a href="" id="g" onmouseover="g()">Verde</a><br><br>
+    <a href="" id="b" onmouseover="b()">Azul</a><br><br>
+    <a href="" id="y" onmouseover="y()">Amarelo</a><br><br>
+</body>
+<footer>
+    <a href="Menu.html">Voltar ao menu</a>
+</footer>
+</html>
+<script>
+    var bg = document.getElementsByTagName("body")[0]
+    function r(){
+        bg.style.backgroundColor = "red"
+    }
+    function g(){
+        bg.style.backgroundColor = "green"
+    }
+    function b(){
+        bg.style.backgroundColor = "blue"
+    }
+    function y(){
+        bg.style.backgroundColor = "yellow"
+    }
+</script>

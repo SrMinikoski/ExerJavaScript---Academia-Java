@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer3</title>
+</head>
+<body>
+    <h1>Exer3</h1>
+    <label for="vermelho">Vermelho</label>
+    <input type="radio" name="radio" id="vermelho" value="r" onclick="mudarCor()"><br>
+    <label for="verde">Verde</label>
+    <input type="radio" name="radio" id="verde" value="g" onclick="mudarCor()"><br>
+    <label for="azul">Azul</label>
+    <input type="radio" name="radio" id="azul" value="b" onclick="mudarCor()"><br>
+    <label for="amarelo">Amarelo</label>
+    <input type="radio" name="radio" id="amarelo" value="y" onclick="mudarCor()"><br>
+</body>
+<footer>
+    <a href="Menu.html">Voltar ao menu</a>
+</footer>
+</html>
+<script>
+    function mudarCor() {
+        var radios = document.getElementsByName("radio");
+        var bg = document.getElementsByTagName("body")[0];
+        for (var i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                if (radios[i].value == "r") {
+                    bg.style.backgroundColor = "red";
+                } else if (radios[i].value == "g") {
+                    bg.style.backgroundColor = "green";
+                } else if (radios[i].value == "b") {
+                    bg.style.backgroundColor = "blue";
+                } else if (radios[i].value == "y") {
+                    bg.style.backgroundColor = "yellow";
+                }
+            }
+        }
+    }
+</script>

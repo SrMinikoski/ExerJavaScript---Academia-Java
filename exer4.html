@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer4</title>
+</head>
+
+<body>
+    <h1>Exer4</h1>
+    <br>
+    <p id="paragrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque distinctio repellat dolores minus quibusdam,
+        veniam quod qui ducimus eaque, libero unde minima vel similique temporibus id modi expedita repudiandae illo.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. A ut voluptatum nemo commodi repudiandae beatae quia
+        eos dignissimos ab mollitia. Laudantium repellendus saepe nihil quam optio dolor ex accusamus accusantium.
+    </p>
+    <br>
+    <button onclick="toggleVisibility()">Esconder/Exibir</button>
+
+    
+    <footer>
+        <a href="Menu.html">Voltar ao menu</a>
+    </footer>
+</body>
+
+</html>
+<script>
+    var p = document.getElementById("paragrafo");
+    function toggleVisibility() {
+        if (p.style.visibility === "hidden") {
+            p.style.visibility = "visible";
+        } else {
+            p.style.visibility = "hidden";
+        }
+    }
+</script>

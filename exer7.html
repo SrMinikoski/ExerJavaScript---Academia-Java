@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer7</title>
+</head>
+<style>
+    *{
+        font-size: 12px;
+    }
+</style>
+
+<body>
+    <h1>Exer7</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero voluptatibus laboriosam nisi quasi soluta
+        voluptatum blanditiis odio ipsam, maiores in eius dolores veniam, minus modi explicabo dolore iste ex
+        asperiores!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, quas. Eaque officiis, magni voluptatum
+        assumenda consequuntur asperiores praesentium ratione repellendus aliquid ad facilis facere, labore, temporibus
+        cum nisi delectus earum.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam optio laborum a facilis, amet consequatur eius
+        alias ipsa. Quisquam, omnis magnam ducimus soluta hic impedit numquam sit animi deserunt nobis!
+    </p>
+    <button onclick="aumentar()">Aumentar</button>
+    <button onclick="diminuir()">Diminuir</button>
+</body>
+<footer>
+    <a href="Menu.html">Voltar ao menu</a>
+</footer>
+</html>
+<script>
+    var p = document.getElementsByTagName("p")[0];
+    var tamanho = 12;
+    function aumentar() {
+        tamanho++;
+        p.style.fontSize = tamanho + "px";
+    }
+    function diminuir() {
+        tamanho--;
+        p.style.fontSize = tamanho + "px";
+    }
+</script>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer8</title>
+    <style>
+        body {
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exer8</h1>
+    <p id="texto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente eligendi distinctio odit. Cumque nesciunt facere quaerat aperiam dolores. Libero mollitia laudantium hic exercitationem ad vitae adipisci nostrum eius. Exercitationem, asperiores?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam nesciunt sit minima architecto aut laudantium quis et, ea necessitatibus, mollitia illo explicabo sequi blanditiis debitis aperiam labore, nemo velit ut?
+    </p>
+    <button onclick="textobranco()">Mudar texto para branco</button>
+    <button onclick="textopreto()">Mudar texto para preto</button>
+    <button onclick="fundobranco()">Mudar fundo para branco</button>
+    <button onclick="fundopreto()">Mudar fundo para preto</button>
+    <button onclick="upper()">Maiúscula</button>
+    <button onclick="lower()">Minúscula</button>
+
+    
+</body>
+<footer>
+    <a href="Menu.html">Voltar ao menu</a>
+</footer>
+</html>
+<script>
+    var bg = document.getElementsByTagName("body")[0];
+    var txt = document.getElementById("texto");
+
+    function textobranco() {
+        txt.style.color = "white";
+    }
+
+    function textopreto() {
+        txt.style.color = "black";
+    }
+
+    function fundobranco() {
+        bg.style.backgroundColor = "white";
+    }
+
+    function fundopreto() {
+        bg.style.backgroundColor = "black";
+    }
+
+    function upper() {
+        txt.innerHTML = txt.innerHTML.toUpperCase();
+    }
+
+    function lower() {
+        txt.innerHTML = txt.innerHTML.toLowerCase();
+    }
+</script>
